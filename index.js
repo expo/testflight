@@ -1,13 +1,19 @@
 #!/usr/bin/env node
+"use strict";
 
-const { exec } = require("child_process");
+const spawn = require("cross-spawn").spawn;
 
-const args = process.argv.slice(2).join(" ");
-
-const child = exec(`npx eas-cli@latest build -p ios --submit ${args}`, {
-  stdio: "inherit",
-});
-
-child.on("error", (error) => {
-  console.error(`Error: ${error.message}`);
+spawn(
+  "npx",
+  [
+    `eas-cli@latest`,
+    `build`,
+    `-p`,
+    `ios`,
+    `--submit`,
+    ...process.argv.slice(2),
+  ],
+  { stdio: "inherit" }
+).on("exit", function (code) {
+  process.exit(code);
 });

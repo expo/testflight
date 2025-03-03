@@ -1,6 +1,6 @@
 {
   "name": "testflight",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Deploy apps directly to TestFlight from the command line using EAS Build and Submit.",
   "main": "index.js",
   "bin": {
