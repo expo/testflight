@@ -1,6 +1,6 @@
 {
   "name": "testflight",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Deploy apps directly to TestFlight from the command line using EAS Build and Submit.",
   "main": "index.js",
   "bin": {
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/evanbacon/testflight.git"
+    "url": "https://github.com/expo/testflight.git"
   },
   "bugs": {
-    "url": "https://github.com/evanbacon/testflight/issues"
+    "url": "https://github.com/expo/testflight/issues"
   },
   "homepage": "https://docs.expo.dev/submit/ios/",
   "scripts": {
