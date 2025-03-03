@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 "use strict";
+const { spawn } = require("child_process");
 
-const spawn = require("cross-spawn").spawn;
-
-spawn(
+const child = spawn(
   "npx",
   [
     `eas-cli@latest`,
@@ -14,6 +13,8 @@ spawn(
     ...process.argv.slice(2),
   ],
   { stdio: "inherit" }
-).on("exit", function (code) {
+);
+
+child.on("exit", function (code) {
   process.exit(code);
 });
